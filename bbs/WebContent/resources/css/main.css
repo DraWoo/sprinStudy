@@ -1,0 +1,1726 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+}
+
+/*reset*/
+html {
+    font-size: 20px;
+    width: 2000px;
+    height: 1200px;
+}
+
+body {
+width: 2000px;
+height: 1200px;
+}
+
+
+html, body {
+    display: flex;
+    font-family: Pretendard;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top;
+    background: transparent;
+    word-break: break-all;
+    letter-spacing: -1px;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    word-break: break-all;
+}
+
+li{ 
+    list-style: none;   
+}
+
+caption,
+.hidden,
+.skip {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -10000px;
+}
+
+
+.content_info {
+  /* Rectangle 3 */
+  
+position: absolute;
+width: 2000px;
+height: 232.02px;
+left: 0px;
+top: 0px;
+
+background: ##F3F3F3;
+}
+
+.vector1 {/* Vector */
+
+
+position: absolute;
+width: 286.13px;
+height: 257.35px;
+left: 271.56px;
+top: 253.09px;
+
+background: rgba(187, 38, 73, 0.2);
+transform: rotate(-57.36deg);
+}
+
+.vector2 {/* Vector */
+
+
+position: absolute;
+width: 69.34px;
+height: 69.34px;
+left: 279.63px;
+top: 14.11px;
+
+background: rgba(187, 38, 73, 0.2);
+}
+
+.vector3 {/* Vector */
+
+
+position: absolute;
+width: 332.79px;
+height: 44.53px;
+left: 1048.63px;
+top: 141.07px;
+
+background: rgba(187, 38, 73, 0.2);
+}  
+
+.vector4 {/* Vector */
+
+
+position: absolute;
+width: 202.6px;
+height: 152.18px;
+left: 1484.45px;
+top: -23.71px;
+
+background: #BB2649;
+mix-blend-mode: multiply;
+opacity: 0.5;
+}
+
+.mtitle {
+position: absolute;
+width: 400px;
+height: 69px;
+left: 830.5px;
+top: 81.51px;
+
+font-family: 'Gmarket Sans TTF';
+font-style: normal;
+font-weight: 500;
+font-size: 60px;
+line-height: 69px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -1px;
+
+color: #BB2649;
+}
+
+.icon {
+  /* 자유소리함 */
+position: absolute;
+width: 169px;
+height: 48px;
+left: 511px;
+top: 311.81px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 48px;
+/* identical to box height */
+
+text-align: right;
+letter-spacing: -1px;
+
+color: #BB2649;
+}
+
+.loc_arw {
+  /* Rectangle 4453 */
+
+
+position: absolute;
+width: 680px;
+height: 2px;
+left: 0px;
+top: 369.81px;
+
+background: #BB2649;
+}
+
+.total_page0{
+  /* 전체*/
+
+
+position: absolute;
+width: 69px;
+height: 21px;
+left: 245px;
+top: 422px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 20px;
+/* identical to box height */
+
+letter-spacing: -0.01em;
+
+color: #7A7A7A;
+}
+
+.total_page1{
+  position: absolute;
+width: 69px;
+height: 21px;
+left: 279px;
+top: 422px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 20px;
+/* identical to box height */
+
+letter-spacing: -0.01em;
+
+color: #BB2649;
+}
+
+.tstyle_list {
+/* Rectangle 132 */
+box-sizing: border-box;
+position: absolute;
+width: 1550px;
+height: 60px;
+left: 225px;
+top: 457.81px;
+
+background: #F3F3F3;
+border-top: 2px solid #BB2649;
+}
+
+
+.W8m_hidden {
+  /* 번호 */
+display: flex;
+position: absolute;
+width: 60px;
+height: 19px;
+left: 56px;
+top: 20.81px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #383838;
+}
+
+.title {
+  /* 제목 */
+display: flex;
+position: absolute;
+width: 60px;
+height: 20px;
+left: 500px;
+top: 20px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 20px;
+letter-spacing: -0.5px;
+
+color: #383838;
+}
+
+.WNIC15 {
+  
+  /* 작성자 */
+  
+display: flex;
+position: absolute;
+width: 60px;
+height: 20px;
+left: 1120px;
+top: 20px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 20px;
+letter-spacing: -0.5px;
+
+color: #383838;
+}
+
+.W13 {
+  
+  /* 등록일 */
+  
+display: flex;
+position: absolute;
+width: 60px;
+height: 20px;
+left: 1400px;
+top: 20px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 20px;
+letter-spacing: -0.5px;
+
+color: #383838;
+}
+
+.board_pager{
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  width: 500px;
+  height: 600px;
+  left: 900px;
+  top: 577.81px;
+}
+
+
+.button1{/* 글쓰기 버튼 */
+
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 101px;
+height: 40px;
+left: 10px;
+top: 10px;
+
+border: 1px solid #BB2649;
+
+  /* 버튼 배경 */
+
+
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 30px;
+gap: 10px;
+
+width: 101px;
+height: 40px;
+
+background: #BB2649;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.button{
+  /* 글쓰기 */
+
+
+width: 41px;
+height: 24px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 148%;
+/* identical to box height, or 24px */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+.BtnArea_right{
+position: absolute;
+width: 500px;
+height: 600px;
+left: 1670px;
+top: 1050px; 
+}
+
+
+.table_line1{
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 1026.81px;
+
+background: #DDDDDD;
+}
+
+.W8m_hidden_1{
+/* 01 */
+
+
+position: absolute;
+width: 17px;
+height: 20px;
+left: 284.51px;
+top: 991.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;  
+}
+
+.title_1{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 800px;
+height: 20px;
+left: 425.91px;
+top: 991.81px; 
+  
+ width: 416px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.comment_1{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 475px;
+height: 20px;
+left: 850px;
+top: 991.81px;
+  
+/* comment */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+gap: 9px;
+
+width: 49px;
+height: 20px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+  /* [8] */
+
+
+width: 22px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #BB2649;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+.WNIC15_1{
+/* 동아일보 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 992.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;  
+}
+
+.W13_1{
+/* 2022.11.29. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1597.05px;
+top: 991.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;  
+}
+
+.table_line2{
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 975.81px;
+
+background: #DDDDDD;  
+}
+
+.W8m_hidden_2{
+/* 02 */
+
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 282.51px;
+top: 940.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;  
+}
+
+.title_2{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 800px;
+height: 20px;
+left: 425.91px;
+top: 940.81px;  
+
+/* 한국타이어, 사진 한장으로 ‘제품 마모도 측정’ */
+
+
+width: 268px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  
+}
+
+.comment_2{
+/* [60] */
+
+
+width: 32px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #BB2649;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  
+  /* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 337px;
+height: 20px;
+left: 705px;
+top: 940.81px;
+  
+/* comment */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+gap: 9px;
+
+width: 59px;
+height: 20px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+
+.WNIC15_2{
+/* 동아일보 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 941.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;  
+}
+
+.W13_2{
+/* 2022.12.01. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1597.05px;
+top: 940.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;  
+}
+
+.table_line3{
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 924.81px;
+
+background: #DDDDDD;  
+}
+
+
+.W8m_hidden_3{
+/* 03 */
+
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 282.51px;
+top: 889.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;
+}
+
+
+.title_3{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 800px;
+height: 20px;
+left: 425.91px;
+top: 889.81px;
+  
+  /* 목포시, 2023년 목포으뜸맛집 4곳 선정 */
+
+
+width: 238px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  
+}
+
+.WNIC15_3{
+/* 연합뉴스 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 890.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;  
+}
+
+.W13_3{
+/* 2022.12.03. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1595.05px;
+top: 889.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.table_line4{
+/* Rectangle 4452 */
+
+
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 873.81px;
+
+background: #DDDDDD;  
+}
+
+.W8m_hidden_4{
+/* 04 */
+
+
+position: absolute;
+width: 22px;
+height: 20px;
+left: 281.51px;
+top: 838.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;  
+}
+
+.title_4{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 800px;
+height: 20px;
+left: 425.91px;
+top: 838.81px;  
+  
+  /* ‘허감관 매혈기’ 중국 소설가 위화 내한 강연 */
+
+
+width: 255px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  
+}
+
+.WNIC15_4{
+/* 뉴시스 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325px;
+top: 839.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;  
+}
+
+.W13_4{
+/* 2022.12.03. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1595.05px;
+top: 838.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+
+.table_line5{
+/* Rectangle 4452 */
+
+
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 822.81px;
+
+background: #DDDDDD;  
+}
+
+.W8m_hidden_5{
+/* 05 */
+
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 282.51px;
+top: 787.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;  
+}
+
+.title_5{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 800px;
+height: 20px;
+left: 425.91px;
+top: 787.81px; 
+
+  /* 이건희 회장 기증품의 전모를 공개한다 */
+
+
+width: 400px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  
+}
+
+.WNIC15_5{
+/* 서울경제 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 788.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;  
+}
+
+.W13_5{
+/* 2022.12.04. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1594.05px;
+top: 787.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;  
+
+color: #333333;
+}
+
+.table_line6{
+  /* Rectangle 4452 */
+
+
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 771.81px;
+
+background: #DDDDDD;
+}
+
+.W8m_hidden_6{
+  /* 06 */
+
+
+position: absolute;
+width: 21px;
+height: 20px;
+left: 282.51px;
+top: 736.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;
+}
+
+.title_6{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 800px;
+height: 20px;
+left: 425.91px;
+top: 736.81px;
+  
+  /* 국립심포니오케스트라, 2023 라인업 공개... ‘오프닝 콘서트’ 1월 12일 */
+
+
+width: 412px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  
+}
+
+.WNIC15_6{
+  /* 파이낸셜뉴스 */
+
+
+position: absolute;
+width: 81px;
+height: 19px;
+left: 1325.69px;
+top: 737.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.W13_6{
+  /* 2022.12.05. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1595.05px;
+top: 736.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.table_line7{
+  /* Rectangle 4452 */
+
+
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 720.81px;
+
+background: #DDDDDD;
+}
+
+.W8m_hidden_7{
+  /* 07 */
+
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 282.51px;
+top: 685.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;
+}
+
+.title_7{
+  /* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 808px;
+height: 20px;
+left: 425.91px;
+top: 685.81px;
+
+  /* [신 팔도명물] 황금어장 인천 강화도 앞바다의 명품 세우젓 */
+
+
+width: 342px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.WNIC15_7{
+  /* 매일신문 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 686.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.W13_7{
+  /* 2022.12.06. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1595.05px;
+top: 685.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.table_line8{
+  /* Rectangle 4452 */
+
+
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 669.81px;
+
+background: #DDDDDD;
+}
+
+.W8m_hidden_8{
+  /* 08 */
+
+
+position: absolute;
+width: 21px;
+height: 20px;
+left: 282.51px;
+top: 634.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;
+}
+
+.title_8{
+  /* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 421px;
+height: 20px;
+left: 425.91px;
+top: 636.81px;
+    
+  /* 동포 남매 찹쌀도넛 전문점 ‘도너츄’ , 美 맛집 레스토랑에 선정 */
+
+
+width: 364px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.WNIC15_8{
+  /* 연합뉴스 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 635.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.W13_8{
+  /* 2022.12.07. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1596.05px;
+top: 634.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.table_line9{
+  /* Rectangle 4452 */
+
+
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 618.81px;
+
+background: #DDDDDD;
+}
+
+.W8m_hidden_9{
+  /* 09 */
+
+
+position: absolute;
+width: 21px;
+height: 20px;
+left: 282.51px;
+top: 583.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;
+}
+
+.title_9{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 421px;
+height: 20px;
+left: 425.91px;
+top: 583.81px;
+
+/* 15%는 일주일 2번 이상 고위험음주... ‘이 정도’ 마시면 폭음음 */
+
+
+width: 363px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.WNIC15_9{
+    /* 동아일보 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 584.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.W13_9{
+  /* 2022.12.07. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1596.05px;
+top: 583.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.table_line10{
+  /* Rectangle 4452 */
+
+
+position: absolute;
+width: 1550px;
+height: 1px;
+left: 225px;
+top: 567.81px;
+
+background: #DDDDDD;
+}
+
+.W8m_hidden_10{
+  /* 10 */
+
+
+position: absolute;
+width: 17px;
+height: 20px;
+left: 284.51px;
+top: 532.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+
+color: #333333;
+}
+
+.title_10{
+/* subject */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 457px;
+height: 20px;
+left: 425.91px;
+top: 532.81px;
+/* “월드컵에 치맥은 못참지?” ... 못 참고 많이 먹으면 엄청 아프다 */
+
+
+width: 370px;
+height: 19px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.5px;
+
+color: #333333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.WNIC15_10{
+  /* 세계일보 */
+
+
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1325.69px;
+top: 533.31px;
+
+font-family: 'Pretendard';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
+
+.W13_10{
+  /* 2022.12.07. */
+
+
+position: absolute;
+width: 100px;
+height: 20px;
+left: 1596.05px;
+top: 532.81px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.5px;
+
+color: #333333;
+}
