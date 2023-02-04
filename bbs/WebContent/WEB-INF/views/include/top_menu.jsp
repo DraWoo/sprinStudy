@@ -7,11 +7,11 @@
 <head>
 <meta charset="UTF-8">
 <!--Google -Fonts-->
-		<link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
 <!--Font-awsome-->
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/resources/css/top_menu.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/resources/css/top_menu.css">
 		
 <title>Insert title here</title>
 </head>
@@ -40,7 +40,7 @@ $(document).ready(function() {
 });
 
 </script>
-<div class="container">
+<section class="container">
 		<header>
 	        <div style="text-align:center;margin-top:25px;font-weight:bold;texxxt-decoration:none;">
 	  			Welcome <a href="https://themeshook.com/" px;target="_blank">to Dragon Blog</a>
@@ -79,10 +79,10 @@ $(document).ready(function() {
 			<nav class="menu">
 				<ul>
 					<li class="active">
-						<a href="#">Home</a>
+						<a href="${pageContext.request.contextPath}/view/main.jsp">Home</a>
 					</li>
 					<li class="drop-down">
-						<a href="#">Products</a>
+						<a href="${pageContext.request.contextPath}/view/board/main.jsp">Products</a>
 					 
 						<div class="mega-menu fadeIn animated">
 							<div class="mm-6column">
@@ -160,9 +160,7 @@ $(document).ready(function() {
 
 				</ul>
 			</nav>
-		</div>
+			</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<body>
 
-</body>
 </html>

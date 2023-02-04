@@ -20,6 +20,13 @@ import org.springframework.web.servlet.ModelAndView;
 public class MainController {
 	
 	private static final Logger log = Logger.getLogger(MainController.class);
+	/**
+	 * =게시판 메인페이지
+	 * @param request
+	 * @param response
+	 * @param vo
+	 * @return
+	 */
 	
 	@RequestMapping(value="/main")
 	public ModelAndView main (HttpServletRequest request, HttpServletResponse response,@RequestParam Map<String, Object> vo) {
