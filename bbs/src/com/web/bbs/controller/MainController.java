@@ -28,24 +28,21 @@ public class MainController {
 	 * @return
 	 */
 	
-	@RequestMapping(value="/main")
+	@RequestMapping(value="/index")
 	public ModelAndView main (HttpServletRequest request, HttpServletResponse response,@RequestParam Map<String, Object> vo) {
-		System.out.println("Vo : "+vo.toString());
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/main");
-		log.debug("[-][DEBUG][-]"+"["+mav+"]");
-		
+		mav.setViewName("/index");
 		return mav;
 		
 	}
 	
-	@RequestMapping(value="/post/insertBbs")
-	public ModelAndView PostMappingTest (@RequestParam Map<String, Object> vo) {
-	    System.out.println("Vo : "+vo.toString()); 
-	    
-	    ModelAndView mav = new ModelAndView();
-	    //출력결과 [no=1, id=devmk]
-	    return mav;
-	}
+	//ajax로 컨트롤단에서 받을때 예제
+	/*
+	 * @RequestMapping(value="/post/insertBbs") public ModelAndView PostMappingTest
+	 * (@RequestParam Map<String, Object> vo) {
+	 * System.out.println("Vo : "+vo.toString());
+	 * 
+	 * ModelAndView mav = new ModelAndView(); //출력결과 [no=1, id=devmk] return mav; }
+	 */
 
 }

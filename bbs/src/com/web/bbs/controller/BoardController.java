@@ -10,13 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class BoardController {
 	private static final Logger log = Logger.getLogger(MainController.class);
 	
-	@RequestMapping(value="/main")
+	@RequestMapping(value="/board_main")
 	public ModelAndView main() {
-		
-		
 		log.debug("[-]boardmain 호출 Start[-]");
-		ModelAndView mav = new ModelAndView("board/main");
-		
+		ModelAndView mav = new ModelAndView("board/board_main");
 		return mav;
 	}
 

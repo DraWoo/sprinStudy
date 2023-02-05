@@ -23,11 +23,7 @@ public class HomeController {
 	@RequestMapping(value="/")
 	public ModelAndView home (HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mav = new ModelAndView("index");
-		
 		mav.addObject("msg", "컨트롤에서 뷰단으로 데이터 넘기기");
-		
-		log.debug("▶▶▶▶▶▶▶▶▶"+mav);
-		
 		return mav;
 	}
 }
