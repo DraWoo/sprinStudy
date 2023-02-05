@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!-- 절대경로 지정해주는 el tag-0 -->  -->
+<!-- 절대경로 지정해주는 el tag-0 --> 
 <c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--css링크-->
     <link href="${root}resources/css/login.css" rel="stylesheet" type="text/css">
-    <!--icon -> include jsp-->
-	<c:import url="/WEB-INF/views/include/ico_cmn.jsp"/>
+   <!--Google -Fonts-->
+<link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
 	 <!-- fontawesome 링크 아이콘 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico"" type="image/x-icon">
 	<script src="https://kit.fontawesome.com/9f5e62a6ef.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -37,7 +38,7 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="${root}main" method="get">
+		<form action="${root}index" method="get">
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -67,14 +68,6 @@
 	</div>
 </div>
 
-<footer>
-	<p>
-		Created with <i class="fa fa-heart"></i> by
-		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-		- Read how I created this and how you can join the challenge
-		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
-	</p>
-</footer>
 </body>
 <script type="text/javascript" src="${root}resources/js/login.js"></script>
 </html>

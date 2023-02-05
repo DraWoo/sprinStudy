@@ -11,8 +11,8 @@
 <link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
 <!--Font-awsome-->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/resources/css/top_menu.css">
+<link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico"" type="image/x-icon">
 		
 <title>Insert title here</title>
 </head>
@@ -70,6 +70,9 @@ $(function() {
         <li><a href="#">entertainment</a></il>
         <li><a href="#">sports</a></il>
         <li><a href="#">money</a></il>  
+        <li style="padding-left: 100px;">
+           <a href="${root}user/lgnout">로그아웃</a>
+        </li>
       </ul>
       <a href="#" id="pull">&#9776;</a>        
     </nav>
