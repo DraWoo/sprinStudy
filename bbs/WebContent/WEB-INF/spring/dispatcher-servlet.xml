@@ -15,6 +15,9 @@
 	
 	<!-- 스캔할 bean들이 모여있는 패키지를 지정한다. -->
 	<context:component-scan base-package="com.web.bbs.controller"/>
+	<!--ㅡbean을 등록할 수 있겠금 해주기 위해 스캔을 할 수 있게 등록해줌  -->
+	<context:component-scan base-package="com.web.bbs.dao"/>
+	<context:component-scan base-package="com.web.bbs.service"/>
 	
 	<!-- Controller의 메서드에서 반환하는 문자열 앞 뒤에 붙힐 경로 정보를 셋팅한다. -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -26,19 +29,18 @@
 	<resources mapping="/**" location="/resources/**"/>
 	
 	<!--ㅡmapper 을 사용할 수 있도록 bean울 정의해 준다.  -->
-	<beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<beans:property name="location">
-			<beans:value>/WEB-INF/properties/db.properties</beans:value>
-		</beans:property>
-	</beans:bean>
-	
-	<!-- 데이터 소스 설정 -->
-	<beans:bean class="org.apache.commons.dbcp2.BasicDataSource" id="basic_data_source">
-		<beans:property name="driverClassName" value="${db.classname}"/>
-		<beans:property name="url" value="${db.url}"/>
-		<beans:property name="username" value="${db.username}"/>
-		<beans:property name="password" value="${db.password}"/>
-	</beans:bean>
+<!--  properties 파일의 내용을 사용할수 있도록 Bean을 정의한다.  -->
+<beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+<beans:property name="location">
+<beans:value>/WEB-INF/properties/db.properties</beans:value>
+</beans:property>
+</beans:bean>
+<beans:bean class="org.apache.commons.dbcp2.BasicDataSource" id="basic_data_source">
+<beans:property name="driverClassName" value="${db.classname}"/>
+<beans:property name="url" value="${db.url}"/>
+<beans:property name="username" value="${db.username}"/>
+<beans:property name="password" value="${db.password}"/>
+</beans:bean>
 	
 	<beans:bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSession">
 		<beans:property name="dataSource" ref="basic_data_source"/>
@@ -49,7 +51,13 @@
 	<beans:bean class="org.mybatis.spring.SqlSessionTemplate" id="sqlSessionTemplate">
 		<beans:constructor-arg index="0" ref="sqlSession"/>
 	</beans:bean>
-			 
+	<!-- 인터셉터 설정 --> 
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+				<beans:bean class="com.web.bbs.interceptor.TopMenuInterceptor"/>
+		</interceptor>
+	</interceptors>		 
 </beans:beans>
 
 

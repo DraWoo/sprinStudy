@@ -1,4 +1,4 @@
-package com.web.bbs.bean;
+package com.web.bbs.beans;
 
 /**
  * tbContentTable 테이블

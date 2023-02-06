@@ -1,4 +1,4 @@
-package com.web.bbs.bean;
+package com.web.bbs.beans;
 
 import java.time.LocalDate;
 

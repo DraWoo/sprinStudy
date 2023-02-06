@@ -66,10 +66,10 @@ $(function() {
     <nav class="clearfix">
       <ul class="clearfix topnav">
         <li><a href="${root}index">Home</a></il>
-        <li><a href="${root}board/board_main">FreeBoard</a></il>
-        <li><a href="#">entertainment</a></il>
-        <li><a href="#">sports</a></il>
-        <li><a href="#">money</a></il>  
+      	<c:forEach var="obj" items="${topMenuList}">
+      	<!-- 게시판의 구분을 위한 쿼리 파라미터로 idx로 구분자를 넣어준다. -->
+        <li><a href="${root}board/board_main?tb_info_idx=${obj.tb_info_idx}">${obj.tb_info_name}</a></il>
+      	</c:forEach>
         <li style="padding-left: 100px;">
            <a href="${root}user/lgnout">로그아웃</a>
         </li>

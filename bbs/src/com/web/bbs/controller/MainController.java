@@ -5,7 +5,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
 	
-	private static final Logger log = Logger.getLogger(MainController.class);
+	private static final Logger log = LoggerFactory.getLogger(MainController.class);
 	/**
 	 * =게시판 메인페이지
 	 * @param request

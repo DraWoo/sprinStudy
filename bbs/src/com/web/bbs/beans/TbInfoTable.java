@@ -1,4 +1,4 @@
-package com.web.bbs.bean;
+package com.web.bbs.beans;
 
 /**
  * DB 데이터를 주입받기 위한 클래스
