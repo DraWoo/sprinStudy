@@ -55,7 +55,7 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form:form action="${root }user/join_pro" method='post' modelAttribute="joinUserBean">
+					<form:form action="${root}user/join" method='post' modelAttribute="joinTbMember">
 						<form:hidden path="userIdExist"/>
 						<div class="form-group">
 							<form:label path="user_name">이름</form:label>

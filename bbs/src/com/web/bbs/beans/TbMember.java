@@ -5,7 +5,7 @@ import java.time.LocalDate;
 /**
  * member table 데이터 주입받기
  * @author DragonWoo
- * 테이블 구조의 type 과 동일하게 주입받는다
+ * 사용자 정보 테이블
  */
 public class TbMember {
 	private int user_idx;

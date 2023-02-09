@@ -7,7 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.web.bbs.beans.TbInfoTable;
-
+/**
+ * mapper로 반환해 주기 위한 클래스
+ * @author DragonWoo
+ *
+ */
 @Repository
 public class TopMenuDao {
 	//dispacher-dervlet에서 bean에 sqlsessionTemplate를 주입받는다.

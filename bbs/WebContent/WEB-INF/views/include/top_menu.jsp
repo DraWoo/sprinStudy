@@ -65,7 +65,7 @@ $(function() {
     <div>
     <nav class="clearfix">
       <ul class="clearfix topnav">
-        <li><a href="${root}index">Home</a></il>
+        <li><a href="${root}main">Home</a></il>
       	<c:forEach var="obj" items="${topMenuList}">
       	<!-- 게시판의 구분을 위한 쿼리 파라미터로 idx로 구분자를 넣어준다. -->
         <li><a href="${root}board/board_main?tb_info_idx=${obj.tb_info_idx}">${obj.tb_info_name}</a></il>

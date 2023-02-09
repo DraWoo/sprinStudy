@@ -3,7 +3,7 @@ package com.web.bbs.beans;
 /**
  * tbContentTable 테이블
  * @author DragonWoo
- *
+ * 게시판 정보 테이블
  */
 public class TbContentTable {
 	

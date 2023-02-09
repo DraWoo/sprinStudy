@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * 
  * @author DragonWoo
- *
+ * 게시판 메인페이지 호울츨 위한 페이지
  */
 @Controller
 @RequestMapping(value="/board")

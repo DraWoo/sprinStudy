@@ -20,6 +20,8 @@ public class TopMenuInterceptor implements HandlerInterceptor{
 	 * this.topMenuService = topMenuService; }
 	 */
 	
+	
+	//컨트롤러 호출 전에 데이터를 판별하기 위한 인터셉터
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {

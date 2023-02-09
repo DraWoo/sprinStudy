@@ -3,7 +3,8 @@ package com.web.bbs.beans;
 /**
  * DB 데이터를 주입받기 위한 클래스
  * @author DragonWoo
- *TbInfoTable 테이블
+ *TbInfoTable 테이블 
+ *4개의 게시판의 인덱스를 쿼리파라미터로 넘겨서 idx로 해당 게시판을 호출하기 위한 용도
  */
 
 

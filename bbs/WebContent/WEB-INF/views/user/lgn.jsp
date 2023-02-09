@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!-- 절대경로 지정해주는 el tag-0 --> 
 <c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
@@ -17,28 +19,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico"" type="image/x-icon">
 	<script src="https://kit.fontawesome.com/9f5e62a6ef.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"/>
     <title>Document</title>
 </head>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#signInFrm")[0].reset();
+	
+});
+</script>
+
 <body>
     <h1>Dragon Blog</h1>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="${root}login" method="get">
+		<form:form action="${root}user/join" method="post" modelAttribute="joinTbMember">
 			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
-		</form>
+			<form:label path="user_id" placeholder="ID" />
+			<form:input path="user_pw" placeholder="Password" />
+			<form:input path="user_nick" placeholder="Nick" />
+			<form:input path="user_email" placeholder="Email" />
+			<form:input path="user_phone" placeholder="Phone" />
+			<form:input path="user_gender" placeholder="Gender" />
+			<fmt:parseDate value="${USER_REGDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​
+			<fmt:parseDate value="${USER_CREATEDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​
+			<button id="signUpReset">Sign Up</button>
+		</form:form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="${root}index" method="get">
+		<form:form action="${root}user/lgn" method="post" modelAttribute="joinTbMember">
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -46,11 +55,13 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<form:input path="user_id" id="user_name" value="" placeholder="ID" />
+			<form:errors path="user_id"/>
+			<form:password path="user_pw" id="pw" value="" placeholder="Password" />
+			<form:errors path="user_pw"/>
 			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
-		</form>
+			<button id="signInReset" onclick="fn_reset">Sign In</button>
+		</form:form>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
