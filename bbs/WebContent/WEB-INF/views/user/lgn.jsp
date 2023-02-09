@@ -24,7 +24,7 @@
 </head>
 <script type="text/javascript">
 $(document).ready(function() {
-	$("#signInFrm")[0].reset();
+	$("#fn_reset")[0].reset();
 	
 });
 </script>
@@ -33,14 +33,15 @@ $(document).ready(function() {
     <h1>Dragon Blog</h1>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form:form action="${root}user/join" method="post" modelAttribute="joinTbMember">
+		<form:form action="${root}user/join_pro" method="post" modelAttribute="joinTbMember">
 			<h1>Create Account</h1>
-			<form:label path="user_id" placeholder="ID" />
-			<form:input path="user_pw" placeholder="Password" />
-			<form:input path="user_nick" placeholder="Nick" />
-			<form:input path="user_email" placeholder="Email" />
-			<form:input path="user_phone" placeholder="Phone" />
-			<form:input path="user_gender" placeholder="Gender" />
+			<form:input path="user_id" placeholder="아이디" />
+			<form:input path="user_pw" placeholder="비밀번호" />
+			<form:input path="user_pwChk" placeholder="비밀번호확인" />
+			<form:input path="user_nick" placeholder="닉네임" />
+			<form:input path="user_email" placeholder="이메일" />
+			<form:input path="user_phone" placeholder="휴대전화번호" />
+			<form:input path="user_gender" placeholder="성별" />
 			<fmt:parseDate value="${USER_REGDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​
 			<fmt:parseDate value="${USER_CREATEDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​
 			<button id="signUpReset">Sign Up</button>
@@ -56,9 +57,9 @@ $(document).ready(function() {
 			</div>
 			<span>or use your account</span>
 			<form:input path="user_id" id="user_name" value="" placeholder="ID" />
-			<form:errors path="user_id"/>
+			<form:errors path="user_id" style="color:red"/>
 			<form:password path="user_pw" id="pw" value="" placeholder="Password" />
-			<form:errors path="user_pw"/>
+			<form:errors path="user_pw" style="color:red"/>
 			<a href="#">Forgot your password?</a>
 			<button id="signInReset" onclick="fn_reset">Sign In</button>
 		</form:form>

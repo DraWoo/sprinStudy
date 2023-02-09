@@ -2,15 +2,34 @@ package com.web.bbs.beans;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 /**
  * member table 데이터 주입받기
  * @author DragonWoo
  * 사용자 정보 테이블
  */
 public class TbMember {
+	
+	//유효성 검사 DB에서 값을 체크해서 getter,setter을 해준다.
+	//@Size(min=2, max=4)
+	//정규식도 셋팅
 	private int user_idx;
+	@Size(min=4, max=20)
+	@Pattern(regexp = "[a-zA-Z0-9]*")
 	private String user_id;
+	
+	@Size(min=4, max=20)
+	@Pattern(regexp = "[a-zA-Z0-9]*")
 	private String user_pw;
+	
+	@Size(min=4, max=20)
+	@Pattern(regexp = "[a-zA-Z0-9]*")
+	private String user_pwChk;
+	
+	@Size(min=2, max=4)
+	@Pattern(regexp ="[가-힣]*") //한글만 입력 받는 정규식 표현
 	private String user_name;
 	private String user_nick;
 	private String user_email;
@@ -37,6 +56,12 @@ public class TbMember {
 	}
 	public void setUser_pw(String user_pw) {
 		this.user_pw = user_pw;
+	}
+	public String getUser_pwChk() {
+		return user_pwChk;
+	}
+	public void setUser_pwChk(String user_pwChk) {
+		this.user_pwChk = user_pwChk;
 	}
 	public String getUser_name() {
 		return user_name;

@@ -2,12 +2,15 @@ package com.web.bbs.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -35,17 +38,28 @@ public class UserController {
 	 */
 	
 	//리턴타입 String
-	@GetMapping(value="/lgn")
-	public String join(@ModelAttribute("joinTbMember")TbMember memberBean) {
-		return "user/lgn";
-	}
-	@GetMapping(value="/join")
-	public String lgn(HttpServletRequest request,HttpServletResponse response) {
-		return "user/join";
-	}
-	@RequestMapping(value="/lgnout")
+	@GetMapping(value="/lgnout")
 	public String lgnout(HttpServletRequest repuest,HttpServletResponse response) {
 		return "user/lgnout";
 	}
+	@GetMapping(value="/lgn")
+	public String lgn(@ModelAttribute("joinTbMember")TbMember memberBean) {
+		return "user/lgn";
+	}
+	
+	//파라미터를 통해서 뷰단에서 넘어온 데이터를 받을 Bean을 설정해준다.
+	/**
+	 * @Valid 유효성 검사
+	 * @ModelAttribute 빈을 주입받기위한 어노테이션
+	 * BindingResult => 유효성 검사에 대한 결과값
+	 * @return
+	 */
 
+	@PostMapping("join_pro") 
+	public String joinPro(@Valid @ModelAttribute("joinTbMember")TbMember memberBean, BindingResult result) { 
+		if(result.hasErrors()) {
+			return "user/lgn";
+		} 
+		return "user/join_sucess"; }
+	
 }
