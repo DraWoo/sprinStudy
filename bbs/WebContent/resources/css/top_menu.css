@@ -42,9 +42,9 @@ nav li {
   position: relative;
   
 }
-nav li a {
+nav li .main {
   text-decoration: none;
-  padding: 0 40px;
+  padding: 0 30px;
   color: #FFF;
   display:inline;
   width: 100%;
@@ -52,6 +52,22 @@ nav li a {
   border-left:2px solid #2a2a2a;
   transition: all 500ms linear;
 }
+nav li a{
+  text-decoration: none;
+  padding: 0 5px;
+  color: #FFF;
+  display:inline;
+  width: 100%;
+  border-right:2px solid #2a2a2a;
+  border-left:2px solid #2a2a2a;
+  transition: all 500ms linear;
+}
+/* .navLgn{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 10px;
+	
+} */
 nav li a:hover {
   color:#fb4f71;
   /* color:#5d3ddf; */

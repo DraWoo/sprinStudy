@@ -65,17 +65,27 @@ $(function() {
     <div>
     <nav class="clearfix">
       <ul class="clearfix topnav">
-        <li><a href="${root}main">Home</a></il>
+        <li><a class="main" href="${root}main">Home</a></il>
       	<c:forEach var="obj" items="${topMenuList}">
       	<!-- 게시판의 구분을 위한 쿼리 파라미터로 idx로 구분자를 넣어준다. -->
-        <li><a href="${root}board/board_main?tb_info_idx=${obj.tb_info_idx}">${obj.tb_info_name}</a></il>
+        <li><a class="main" href="${root}board/board_main?tb_info_idx=${obj.tb_info_idx}">${obj.tb_info_name}</a></il>
       	</c:forEach>
-        <li style="padding-left: 100px;">
+        <li style="padding-left:110px;font-size:17px">
+           <a href="${root}user/lgn">로그인</a>
+        </li>
+        <li style="font-size:17px">
+           <a href="${root}user/join">회원가입</a>
+        </li>
+        <li style="font-size:17px">
+           <a href="${root}user/modify">정보수정</a>
+        </li>
+        <li style="font-size:17px">
            <a href="${root}user/lgnout">로그아웃</a>
         </li>
       </ul>
       <a href="#" id="pull">&#9776;</a>        
     </nav>
+    
   </div>
 </header>
 

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var='root' value="${pageContext.request.contextPath}/"/>
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
 <%-- <c:url var='root' value="/"/> --%>
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,8 @@
 <link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
 <!--Font-awsome-->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css"href="${pageContext.request.contextPath}/resources/css/top_menu.css">
+<link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico"" type="image/x-icon">
 		
 <title>Insert title here</title>
 </head>
@@ -20,17 +20,16 @@
 
 $(document).ready(function() {
 	//메뉴클릭 햄버거 [모바일 버전]
- 	$("#menutoggle").click(function() {
+/* 	$("#menutoggle").click(function() {
 		$('.xs-menu').toggleClass('displaynone');
 
 		});
 	//add active class on menu[웹 버전]]
-	/* $('ul li').click(function(e) {
+	$('ul li').click(function(e) {
 		e.preventDefault();
-		e.stopPropagation();
 		$('li').removeClass('active');
 		$(this).addClass('active');
-	});  */
+	}); */
 //drop down menu	예제
 /* 		$(".drop-down").hover(function() {
 			$('.mega-menu').addClass('display-on');
@@ -38,80 +37,46 @@ $(document).ready(function() {
 		$(".drop-down").mouseleave(function() {
 			$('.mega-menu').removeClass('display-on');
 		}); */
-
+// In Settings > Javascript > add jquery file
+$(function() {
+	var pull = $('#pull');
+	menu = $('nav ul');
+	menuHeight	= menu.height();
+    $(pull).on('click', function(e) {
+	    e.preventDefault();
+	    menu.slideToggle();
+    });
+    $(window).resize(function(){
+    		var w = $(window).width();
+    		if(w > 320 && menu.is(':hidden')) {
+    			menu.removeAttr('style');
+    		}
+  	});
 });
-
+});
 </script>
-<section class="container">
-		<header>
-	        <div style="text-align:center;margin-top:25px;font-weight:bold;texxxt-decoration:none;">
+<!-- 상단 메뉴 부분 -->
+<body>
+<header>
+    <div style="text-align:center;margin-top:25px;font-weight:bold;texxxt-decoration:none;">
 	  			Welcome <a href="https://themeshook.com/" px;target="_blank">to Dragon Blog</a>
 			</div>
 				<h1>Dragon Blog</h1>
-		</header>
-		<!-- 햄버거 메뉴 start -->
-			<div class="xs-menu-cont">
-			<a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
-				<nav class="xs-menu displaynone">
-					<ul>
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#">About</a>
-						</li>
-						<li>
-							<a href="#">Services</a>
-						</li>
-						<li>
-							<a href="#">Team</a>
-						</li>
-						<li>
-							<a href="#">Portfolio</a>
-						</li>
-						<li>
-							<a href="#">Blog</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		<!-- 햄버거 메뉴 end -->
-		<!-- web menu start -->
-			<nav class="menu">
-				<ul>
-					<li>
-					<!-- class="nav-link" 부트스트랩에서는 페이지이동을 위해 해당 클래스를 추가 -->
-						<a href="${root}index" class="nav-link">Home</a>
-					</li>
-					<li>
-						 <a href="${root}board/board_main" class="nav-link">Products</a> 
-					</li>
-					<li>
-						<a href="#" >Services</a>
-					</li>
-					<li>
-						<a href="#" >Team</a>
-					</li>
-					<li>
-						<a href="#" >Portfolio</a>
-					</li>
-					<li>
-						<a href="#" >Blog</a>
+    <div>
+    <nav class="clearfix">
+      <ul class="clearfix topnav">
+        <li><a href="${root}main">Home</a></il>
+      	<c:forEach var="obj" items="${topMenuList}">
+      	<!-- 게시판의 구분을 위한 쿼리 파라미터로 idx로 구분자를 넣어준다. -->
+        <li><a href="${root}board/board_main?tb_info_idx=${obj.tb_info_idx}">${obj.tb_info_name}</a></il>
+      	</c:forEach>
+        <li style="padding-left: 100px;">
+           <a href="${root}user/lgnout">로그아웃</a>
+        </li>
+      </ul>
+      <a href="#" id="pull">&#9776;</a>        
+    </nav>
+  </div>
+</header>
 
-					</li>
-					<li>
-						<a target="_blank" href="http://www.mywebtricks.com/">Contact</a>
-					</li>
-         <li style="float:right;">
-           <a href="${root}user/lgn" class="nav-link">Sign In</a>
-          </li>
-		</ul>
-	</nav>
-<!-- web menu end -->
-</section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-</html>
+</body>
