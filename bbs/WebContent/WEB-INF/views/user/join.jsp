@@ -1,14 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!-- 절대경로 지정해주는 el tag-0 --> 
 <c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dragon Blog</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Google -Fonts-->
+<link href='https://fonts.googleapis.com/css?family=Sintony:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+	 <!-- fontawesome 링크 아이콘 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico"" type="image/x-icon">
+	<script src="https://kit.fontawesome.com/9f5e62a6ef.js" crossorigin="anonymous"></script>
+<title>DragonBBS</title>
 <!-- Bootstrap CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -55,8 +64,8 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form:form action="${root}user/join" method='post' modelAttribute="joinTbMember">
-						<form:hidden path="userIdExist"/>
+					<form:form action="${root }user/join_pro" method='post' modelAttribute="joinTbMember">
+						<%-- <form:hidden path="userIdExist"/> --%>
 						<div class="form-group">
 							<form:label path="user_name">이름</form:label>
 							<form:input path="user_name" class='form-control'/>
@@ -74,14 +83,48 @@
 						</div>
 						<div class="form-group">
 							<form:label path="user_pw">비밀번호</form:label>
-							<form:password path="user_pw" class='form-control'/>
+						<div class="input-group">
+							<form:input path="user_pw" class='form-control' placeholder="비밀번호" />
 							<form:errors path='user_pw' style='color:red'/>
 						</div>
-						<div class="form-group">
-							<form:label path="user_pw2">비밀번호 확인</form:label>
-							<form:password path="user_pw2" class='form-control'/>
-							<form:errors path='user_pw2' style='color:red'/>
 						</div>
+						<div class="form-group">
+							<form:label path="user_pwChk">비밀번호 확인</form:label>
+						<div class="input-group">
+							<form:input path="user_pwChk" class='form-control' placeholder="비밀번호확인" />
+							<form:errors path='user_pwChk' style='color:red'/>
+						</div>
+						</div>
+						<div class="form-group">
+							<form:label path="user_nick">닉네임</form:label>
+						<div class="input-group">
+							<form:input path="user_nick" class='form-control' placeholder="닉네임" />
+							<form:errors path='user_nick' style='color:red'/>
+						</div>
+						</div>
+						<div class="form-group">
+							<form:label path="user_email">이메일</form:label>
+						<div class="input-group">
+							<form:input path="user_email" class='form-control' placeholder="이메일" />
+							<form:errors path='user_email' style='color:red'/>
+						</div>
+						</div>
+						<div class="form-group">
+							<form:label path="user_phone">휴대전화번호</form:label>
+						<div class="input-group">
+							<form:input path="user_phone" class='form-control' placeholder="휴대전화번호" />
+							<form:errors path='user_phone' style='color:red'/>
+						</div>
+						</div>
+						<div class="form-group">
+							<form:label path="user_gender">성별</form:label>
+						<div class="input-group">
+							<form:input path="user_gender" class='form-control' placeholder="성별" />
+							<form:errors path='user_gender' style='color:red'/>
+						</div>
+						</div>
+						<fmt:parseDate value="${USER_REGDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​
+						<fmt:parseDate value="${USER_CREATEDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​
 						<div class="form-group">
 							<div class="text-right">
 								<form:button class='btn btn-primary'>회원가입</form:button>
@@ -95,7 +138,7 @@
 	</div>
 </div>
 
-<c:import url="/WEB-INF/views/include/bottom_info.jsp"/>
+<c:import url="/WEB-INF/views/include/footer.jsp"/>
 
 </body>
 </html>

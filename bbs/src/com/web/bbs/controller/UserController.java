@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,6 +38,7 @@ public class UserController {
 	 * mav; }
 	 */
 	
+	
 	//리턴타입 String
 	@GetMapping(value="/lgnout")
 	public String lgnout(HttpServletRequest repuest,HttpServletResponse response) {
@@ -46,7 +48,10 @@ public class UserController {
 	public String lgn(@ModelAttribute("joinTbMember")TbMember memberBean) {
 		return "user/lgn";
 	}
-	
+	@GetMapping(value="join")
+	public String join(@ModelAttribute("joinTbMember")TbMember memberBean) {
+		return "user/join";
+	}
 	//파라미터를 통해서 뷰단에서 넘어온 데이터를 받을 Bean을 설정해준다.
 	/**
 	 * @Valid 유효성 검사
@@ -60,6 +65,7 @@ public class UserController {
 		if(result.hasErrors()) {
 			return "user/lgn";
 		} 
-		return "user/join_sucess"; }
+		return "user/lgn_fail"; 
+		}
 	
 }
