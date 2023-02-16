@@ -45,13 +45,14 @@ public class UserController {
 		return "user/lgnout";
 	}
 	@GetMapping(value="/lgn")
-	public String lgn(@ModelAttribute("joinTbMember")TbMember memberBean) {
+	public String lgn(@ModelAttribute("joinTbMember")TbMember joinTbMember) {
 		return "user/lgn";
 	}
 	@GetMapping(value="join")
-	public String join(@ModelAttribute("joinTbMember")TbMember memberBean) {
+	public String join(@ModelAttribute("joinTbMember")TbMember joinTbMember) {
 		return "user/join";
 	}
+	
 	//파라미터를 통해서 뷰단에서 넘어온 데이터를 받을 Bean을 설정해준다.
 	/**
 	 * @Valid 유효성 검사
@@ -61,11 +62,12 @@ public class UserController {
 	 */
 
 	@PostMapping("join_pro") 
-	public String joinPro(@Valid @ModelAttribute("joinTbMember")TbMember memberBean, BindingResult result) { 
+	public String joinPro(@Valid @ModelAttribute("joinTbMember")TbMember joinTbMember, BindingResult result) { 
+		//유효성 검사에 문제가 있다면 hasErrors
 		if(result.hasErrors()) {
-			return "user/lgn";
+			return "user/join";
 		} 
-		return "user/lgn_fail"; 
+		return "user/join_success"; 
 		}
 	
 }

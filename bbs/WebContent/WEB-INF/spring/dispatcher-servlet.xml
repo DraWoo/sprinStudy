@@ -57,7 +57,20 @@
 			<mapping path="/**"/>
 				<beans:bean class="com.web.bbs.interceptor.TopMenuInterceptor"/>
 		</interceptor>
-	</interceptors>		 
+	</interceptors>		
+	 <!-- properties에서 등록한 메시를 등록해 준다. -->
+	 <beans:bean class="org.springframework.context.support.ReloadableResourceBundleMessageSource" id="messageSource">
+	 	<beans:property name="basenames">
+	 		<beans:list>
+	 			<beans:value>/WEB-INF/properties/error_message</beans:value>
+	 		</beans:list>
+	 	</beans:property>
+	 </beans:bean>
+	 <!-- 등록해준 Messgae 접근을 위한 접근자 등록 -->
+	 <beans:bean class="org.springframework.context.support.MessageSourceAccessor">
+	 	<beans:constructor-arg ref="messageSource"/>
+	 </beans:bean>
+	 
 </beans:beans>
 
 

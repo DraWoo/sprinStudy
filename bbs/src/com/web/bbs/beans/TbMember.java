@@ -2,6 +2,7 @@ package com.web.bbs.beans;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -16,6 +17,7 @@ public class TbMember {
 	//@Size(min=2, max=4)
 	//정규식도 셋팅
 	private int user_idx;
+	
 	@Size(min=4, max=20)
 	@Pattern(regexp = "[a-zA-Z0-9]*")
 	private String user_id;
@@ -29,10 +31,14 @@ public class TbMember {
 	private String user_pwChk;
 	
 	@Size(min=2, max=4)
-	@Pattern(regexp ="[가-힣]*") //한글만 입력 받는 정규식 표현
+	@Pattern(regexp = "[가-힣]*") //한글만 입력 받는 정규식 표현
 	private String user_name;
+	
 	private String user_nick;
 	private String user_email;
+	
+	@Size(min=10, max=11)
+	@Pattern(regexp="[0-9]*")
 	private String user_phone;
 	private String user_gender;
 	private String user_gegdate;

@@ -69,8 +69,8 @@
 						<div class="form-group">
 							<form:label path="user_name">이름</form:label>
 							<form:input path="user_name" class='form-control'/>
-							<form:errors path="user_name" style='color:red'/>
 						</div>
+							<form:errors path="user_name" style='color:red'/>
 						<div class="form-group">
 							<form:label path="user_id">아이디</form:label>
 							<div class="input-group">
@@ -85,43 +85,43 @@
 							<form:label path="user_pw">비밀번호</form:label>
 						<div class="input-group">
 							<form:input path="user_pw" class='form-control' placeholder="비밀번호" />
-							<form:errors path='user_pw' style='color:red'/>
 						</div>
+							<form:errors path='user_pw' style='color:red'/>
 						</div>
 						<div class="form-group">
 							<form:label path="user_pwChk">비밀번호 확인</form:label>
 						<div class="input-group">
 							<form:input path="user_pwChk" class='form-control' placeholder="비밀번호확인" />
-							<form:errors path='user_pwChk' style='color:red'/>
 						</div>
+							<form:errors path='user_pwChk' style='color:red'/>
 						</div>
 						<div class="form-group">
 							<form:label path="user_nick">닉네임</form:label>
 						<div class="input-group">
 							<form:input path="user_nick" class='form-control' placeholder="닉네임" />
-							<form:errors path='user_nick' style='color:red'/>
 						</div>
+							<form:errors path='user_nick' style='color:red'/>
 						</div>
 						<div class="form-group">
 							<form:label path="user_email">이메일</form:label>
 						<div class="input-group">
 							<form:input path="user_email" class='form-control' placeholder="이메일" />
-							<form:errors path='user_email' style='color:red'/>
 						</div>
+							<form:errors path='user_email' style='color:red'/>
 						</div>
 						<div class="form-group">
 							<form:label path="user_phone">휴대전화번호</form:label>
 						<div class="input-group">
 							<form:input path="user_phone" class='form-control' placeholder="휴대전화번호" />
-							<form:errors path='user_phone' style='color:red'/>
 						</div>
+							<form:errors path='user_phone' style='color:red'/>
 						</div>
 						<div class="form-group">
 							<form:label path="user_gender">성별</form:label>
 						<div class="input-group">
 							<form:input path="user_gender" class='form-control' placeholder="성별" />
-							<form:errors path='user_gender' style='color:red'/>
 						</div>
+							<form:errors path='user_gender' style='color:red'/>
 						</div>
 						<fmt:parseDate value="${USER_REGDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​
 						<fmt:parseDate value="${USER_CREATEDATE}" var="REQUEST_DATE" pattern="yyyyMMdd"/>​

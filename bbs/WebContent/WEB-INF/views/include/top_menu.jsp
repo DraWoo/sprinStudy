@@ -70,7 +70,7 @@ $(function() {
       	<!-- 게시판의 구분을 위한 쿼리 파라미터로 idx로 구분자를 넣어준다. -->
         <li><a class="main" href="${root}board/board_main?tb_info_idx=${obj.tb_info_idx}">${obj.tb_info_name}</a></il>
       	</c:forEach>
-        <li style="padding-left:110px;font-size:17px">
+        <li style="font-size:17px">
            <a href="${root}user/lgn">로그인</a>
         </li>
         <li style="font-size:17px">
