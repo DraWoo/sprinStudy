@@ -9,13 +9,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.web.bbs.beans.TbMember;
+import com.web.bbs.validator.UserValidator;
 /**
  * 사용자 로그인을 위한 컨틀롤러
  * @author DragonWoo
@@ -70,4 +73,10 @@ public class UserController {
 		return "user/join_success"; 
 		}
 	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		UserValidator validator1 = new UserValidator();
+		log.debug("++비밀번호일치여부++"+validator1);
+		binder.addValidators(validator1);
+	}
 }
